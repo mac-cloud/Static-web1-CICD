@@ -1,0 +1,1 @@
+# Static-web1-CICD
