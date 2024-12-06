@@ -6,7 +6,7 @@ RUN echo '{\n  "name": "my-app",\n  "version": "1.0.0",\n  "scripts": {\n    "bu
 
 RUN npm install
 
-COPY frontend/ .
+COPY . .
 
 RUN npm run build
 
