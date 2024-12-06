@@ -13,6 +13,10 @@ jobs:
     # Checkout the code
     - name: Checkout code
       uses: actions/checkout@v2
+    # check files available
+    - name: List files in the repo
+      run: |
+        ls -alh
 
     # Set up Docker
     - name: Set up Docker Buildx
