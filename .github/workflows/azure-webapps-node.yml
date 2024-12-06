@@ -39,7 +39,7 @@ jobs:
         docker build -t ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/react-app:${{ github.sha }} .
         docker build -t ${{ secrets.DOCKER_USERNAME }}/react-app:${{ github.sha }} .
 
-    # Push Docker image to Azure Container Registry
+    # Push Docker image to Azure Container Registrys
     - name: Push Docker Image to ACR
       run: |
         docker push ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/react-app:${{ github.sha }}
