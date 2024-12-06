@@ -2,7 +2,18 @@ FROM node:14-alpine as build
 
 WORKDIR /app
 
-COPY frontend/package*.json ./
+RUN echo '{
+  "name": "my-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}' > package.json
 
 RUN npm install
 
