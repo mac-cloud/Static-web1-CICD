@@ -40,8 +40,8 @@ jobs:
     # Build the Docker image
     - name: Build Docker image
       run: |
-        docker build -f Static-web1-CICD/Dockerfile -t ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/react-app:${{ github.sha }} .
-        docker build -f Static-web1-CICD/Dockerfile -t ${{ secrets.DOCKER_USERNAME }}/react-app:${{ github.sha }} .
+        docker build -f Dockerfile -t ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/react-app:${{ github.sha }} .
+        docker build -f Dockerfile -t ${{ secrets.DOCKER_USERNAME }}/react-app:${{ github.sha }} .
 
     # Push Docker image to Azure Container Registry
     - name: Push Docker Image to ACR
