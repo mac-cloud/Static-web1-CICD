@@ -8,6 +8,8 @@ RUN npm install
 
 COPY . .
 
+RUN ls -l /app/public
+
 RUN npm install -g react-scripts
 
 RUN npm run build
