@@ -3,7 +3,7 @@ name: Build, Dockerize, and Deploy React App to Azure Static Web App
 on: 
   push: 
     branches:
-      - main  # Deploy changes to the main branch
+      - new-main  # Deploy changes to the main branch
 
 jobs: 
   build-and-deploy:
