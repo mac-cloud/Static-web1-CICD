@@ -2,13 +2,13 @@ FROM node:14-alpine as build
 
 WORKDIR /app
 
-RUN printf '{\n  "name": "my-app",\n  "version": "1.0.0",\n  "scripts": {\n    "build": "react-scripts build",\n    "start": "react-scripts start",\n    "test": "react-scripts test",\n    "eject": "react-scripts eject"\n  },\n  "dependencies": {\n "react-scripts": "latest" },\n  "devDependencies": {}\n}' > package.json
+COPY ./Frontend/package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY Frontend/ .
 
-RUN ls -l /app/Frontend/public
+RUN ls -l /app/public
 
 RUN npm install -g react-scripts
 
